@@ -7,8 +7,6 @@ AniMatch delivers a cinematic anime experience with smooth animations, fullscree
 ---
 
 # Features
-
--  Netflix-style animated intro
 -  Cinematic red & black anime UI
 -  Fullscreen anime background video
 -  Real-time anime search
@@ -19,7 +17,7 @@ AniMatch delivers a cinematic anime experience with smooth animations, fullscree
 -  Smooth GSAP & Framer Motion animations
 -  Fully responsive design
 -  Dynamic anime data using Jikan API
--  Global deployment with Verce
+-  Global deployment with Vercel
 
 #  Tech Stack
 
