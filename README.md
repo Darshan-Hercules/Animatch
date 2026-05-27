@@ -1,73 +1,62 @@
-# React + TypeScript + Vite
+# AniMatch 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium anime recommendation and watchlist platform built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+AniMatch delivers a cinematic anime experience with smooth animations, fullscreen anime background videos, trending anime discovery, user authentication, and personalized watchlists inspired by modern streaming platforms like Netflix and Crunchyroll.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+# Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-  Netflix-style animated intro
+-  Cinematic red & black anime UI
+-  Fullscreen anime background video
+-  Real-time anime search
+-  Trending & Top Rated anime
+-  Personal watchlist system
+-  Authentication with Supabase
+-  User profile system
+-  Smooth GSAP & Framer Motion animations
+-  Fully responsive design
+-  Dynamic anime data using Jikan API
+-  Global deployment with Verce
 
-## Expanding the ESLint configuration
+#  Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- GSAP
+- Supabase
+- Jikan API
+- Vercel
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+#  Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+text
+animatch/
+│
+├── public/
+│   ├── videos/
+│   │   └── luffy-bg.mp4
+│   ├── images/
+│   └── favicon.svg
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── services/
+│   ├── api/
+│   ├── animations/
+│   ├── styles/
+│   ├── utils/
+│   └── main.tsx
+│
+├── supabase/
+├── .env
+├── package.json
+├── vite.config.ts
+└── tailwind.config.js
