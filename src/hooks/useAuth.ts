@@ -32,7 +32,7 @@ export function useAuth() {
     }
 
     // Check active session on mount
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    supabase.auth.getSession().then(({ data: { session } }: any) => {
       setUser(session?.user ?? null);
       if (session?.user) {
         fetchProfile(session.user.id);
@@ -42,7 +42,7 @@ export function useAuth() {
     });
 
     // Listen for auth state changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event: any, session: any) => {
       // If guest session is active, don't let Supabase clear it
       if (localStorage.getItem('animatch_guest_user')) return;
 
