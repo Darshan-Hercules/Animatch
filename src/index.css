@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Outfit', sans-serif;
+    background-color: #0a0a0a;
+    color: #eaeaea;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #0a0a0a;
+  }
+
+  /* Custom Crimson Neon Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #0d0d0d;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #4a0000;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff0033;
+    box-shadow: 0 0 10px #ff0033;
+  }
+
+  /* Custom heading typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Red Neon Glow Effects */
+  .text-neon {
+    text-shadow: 0 0 5px rgba(255, 0, 51, 0.4), 
+                 0 0 15px rgba(255, 0, 51, 0.7), 
+                 0 0 30px rgba(255, 0, 51, 0.9);
+  }
+
+  .text-neon-subtle {
+    text-shadow: 0 0 8px rgba(255, 0, 51, 0.5);
+  }
+
+  .border-neon {
+    border-color: rgba(255, 0, 51, 0.5);
+    box-shadow: 0 0 10px rgba(255, 0, 51, 0.3);
+  }
+
+  .border-neon:hover {
+    border-color: rgba(255, 0, 51, 0.9);
+    box-shadow: 0 0 20px rgba(255, 0, 51, 0.7);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 20px rgba(255, 0, 51, 0.3);
+  }
+
+  .glow-red-hover:hover {
+    box-shadow: 0 0 25px rgba(255, 0, 51, 0.6);
+  }
+
+  /* Hide default scrollbars for row lists */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Base resets for full-width layout */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Netflix-style Startup Logo Sweep Animation */
+@keyframes sweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.logo-sweep {
+  background: linear-gradient(
+    120deg,
+    #ff0033 30%,
+    #ff6680 40%,
+    #ff0033 50%,
+    #8b0000 70%,
+    #ff0033 80%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: sweep 3.5s linear infinite;
+  text-shadow: 0 0 20px rgba(255, 0, 51, 0.3);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(18, 18, 18, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-neon {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 0, 51, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(255, 0, 51, 0.08);
+}
